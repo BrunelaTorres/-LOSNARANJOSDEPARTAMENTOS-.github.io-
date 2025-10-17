@@ -1,205 +1,250 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
 
-header{
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: #fedeb5;
-    width: 100%;
-    padding: 10px; 
+/* --- ESTILO GENERAL --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-header ul{
-    list-style: none;/*saca los items de lista -*/
-    display: flex;
-    flex-direction: row;  
-    align-items: center;
+body {
+  font-family: "Libre Baskerville", serif;
+  background-color: #fffaf5;
+  color: #000;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 
-.boton{
-    margin: 10px;
-    padding: 15px 10px;
-    font-size: 18px;
-    color: white;
-    background: linear-gradient(#ff642b);
-    border-radius: 50px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    transition: all 0.3s ease-in-out;
-    text-decoration: none;
+/* --- ENCABEZADO --- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fedeb5;
+  width: 100%;
+  padding: 2rem 1rem;
 }
 
-.boton:hover{
-    transform: scale(1.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.encabezado img {
+  width: 220px;
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 0.8rem;
 }
 
-.encabezado img{
-    width: 250px;
-    margin-bottom: 10px;
+.titulos {
+  text-align: center;
 }
 
-.titulos {  
-  text-align: center; 
-  flex-direction: row-reverse;    
+h1 {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: rgb(255, 118, 6);
 }
 
-h1{
-    font-size: 24px;
-    color: rgb(255, 118, 6);
-    font-family: cursive;
-    font-family: "Libre Baskerville", serif;
+h2 {
+  color: rgb(255, 116, 3);
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
-h2{
-    color:rgb(255, 116, 3);
-    font-size:18px;
-    font-family: cursive;
+/* --- NAVEGACIÓN --- */
+header ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
-p{
-    font-size: 20px;
-    color: black;
+.boton {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  color: white;
+  background-color: #ff6600;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  text-decoration: none;
 }
 
-.presentacion{
-    width:100%;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    text-align: center;
-    font-size: 10px;
-    margin-top: 10px;
+.boton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-.presentacion h1{
-    font-size: 30px;
-    color: rgb(216, 94, 24);
-    text-align: center;
-    font-family: "Libre Baskerville", serif;
-    margin-top: 20px;
+/* --- PRESENTACIÓN --- */
+.presentacion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
 }
 
-.presentacion p{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    padding: 10px;
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-style: normal;
+.presentacion p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 800px;
 }
 
+/* --- CARRUSEL --- */
 #carousel {
-    width: 80%;
-    align-content: center;
-    margin-right: 30px;
-    margin-left: 30px;
-    align-items: center;
+  width: 90%;
+  max-width: 800px;
+  margin: 1.5rem auto;
 }
 
-.contenedor{
-    display:flex;/*los elementos dentrode esa caja van a ser flexibles*/
-    flex-direction: row; 
-    width: 100%;
-    margin: 10px 0 10px 0; /* top, left, bottom, rigth*/
-    background-color: rgb(255, 104, 45);
-    
+/* --- SECCIONES DE CABAÑAS --- */
+.contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(255, 104, 45);
+  padding: 2rem 1rem;
+  gap: 1.5rem;
 }
 
-.caja{
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.caja {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1rem;
+  width: 300px;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.caja h1{
-    color: #fffefd;
-    font-family: "Libre Baskerville", serif;
+.caja img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.caja img{
-    border-radius: 50%;
-    width: 150px; /*ancho (el alto es automatico dependiendo la imagen*/
+.caja h1 {
+  color: #fffefd;
+  margin-bottom: 0.5rem;
 }
 
-.caja p{
-    font-size: 21px; /*tamaño de letra  de los parrafos*/
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family:cursive;
+.caja p {
+  font-size: 1rem;
+  color: white;
+  font-family: cursive;
+  display: none; /* Oculto por defecto */
 }
 
-/* Oculta los textos al cargar la página */
-#boton1,
-#boton2,
-#boton3 {
-  display: none;
-}
-
+/* --- BOTONES DESPLEGABLES --- */
 .btn-primary {
-    background-color: white !important; /* Forza el btn*/
-    color: #ff6600;                
-    font-size: 16;
-    transition: all 0.3s ease-in-out;
+  background-color: white;
+  color: #ff6600;
+  border: 2px solid #ff6600;
+  border-radius: 30px;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
-.btn-primary::after { /* Flecha naranja */
-    content: "▼";
-    align-self: center;
-    font-size: 14px;
-    color: #ff6600;
+.btn-primary::after {
+  content: " ▼";
+  color: #ff6600;
 }
 
 .btn-primary:hover {
-    background-color: #ff6600;   
-    color: #ff6600;              
+  background-color: #ff6600;
+  color: white;
 }
 
-.btn-primary:hover::after { /* Flecha blanca en hover */
-    color: white;           
+.btn-primary:hover::after {
+  color: white;
 }
 
-.slogan h1{
-    text-align:center;
-    font-family:cursive;
-    margin-top: 20px;
-    margin-bottom: 20px;
+/* --- SLOGAN --- */
+.slogan h1 {
+  text-align: center;
+  font-family: cursive;
+  margin: 2rem 1rem;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  color: #ff6600;
 }
 
-#ubicacion{
-    width:70%;
-    display:flex;
-    align-items:center;
+/* --- UBICACIÓN --- */
+#ubicacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem;
 }
 
-#ubicacion h2{  /*direccion*/
-    text-align:right;
-    align-content:space-between;
-    color: chocolate;
-    font-size:large;
-    text-decoration-style: dotted;
+#ubicacion h2 {
+  color: chocolate;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
 }
 
-#ubicacion iframe{
-    padding: 10px;
-    margin:10px; 
-    flex-direction:column-reverse;
+#ubicacion iframe {
+  width: 90%;
+  max-width: 800px;
+  height: 400px;
+  border: 0;
+  border-radius: 10px;
 }
 
-footer{
-   text-align:left;
-   padding:30px;
-   background-color:#f87400;
+/* --- FOOTER --- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f87400;
+  color: white;
 }
 
-footer p{
-    font-size: 12px;
+footer p {
+  font-size: 0.8rem;
+}
+
+/* --- MEDIA QUERIES (AJUSTES POR DISPOSITIVO) --- */
+
+/* Tablets */
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+  }
+
+  .caja {
+    width: 80%;
+  }
+
+  #ubicacion iframe {
+    height: 350px;
+  }
+}
+
+/* Celulares */
+@media (max-width: 480px) {
+  .encabezado img {
+    width: 180px;
+  }
+
+  .boton {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .caja img {
+    width: 100px;
+    height: 100px;
+  }
+
+  #ubicacion iframe {
+    height: 300px;
+  }
 }
