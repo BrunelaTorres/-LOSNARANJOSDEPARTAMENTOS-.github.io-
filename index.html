@@ -1,109 +1,37 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--para que se adapte a cualquier pantalla-->
-    <meta charset="UTF-8"> <!--dan la info de la pagina al navegador -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <!--llama la hoja de estilos-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"><!--llama al archivo css de bootstrap-->
-    <script defer src="./main.js"></script>
-    <title>Los Naranjos Departamentos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Los Naranjos Departamentos</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Script principal -->
+  <script defer src="./main.js"></script>
 </head>
 
 <body>
-    <header>
-        <div class="encabezado">
-            <img src= "Imagenes/LOS NARANJOS.png" alt="logo">
-            <div class= "titulos">
-                <h1>LOS NARANJOS DEPARTAMENTOS</h1>
-                <h2>Embalse de Calamuchita</h2>
-            </div>
-        </div>
-        <nav>
-            <ul>
-                <a class="boton" href="#ubicacion"><li>UBICACIÓN</li></a>
-                <a class="boton" href="https://www.instagram.com/losnaranjos.departamentos/"><li>INSTAGRAM</li></a>
-                <a class="boton" href="https://www.facebook.com/p/Los-Naranjos-Departamentos-100071338632472/"> <li>FACEBOOK</li></a>
-                <a class="boton" href="https://wa.me/5493571531090?text=Hola!%20Quiero%20saber%20si%20tiene%20disponible%20un%20departamento%20para%20el%20día..."><li>CONTACTANOS</li></a>
-            </ul>
-        </nav>
-    </header>
-
-    <div class="presentacion">
-        <P>Un lugar familiar frente a una plaza con juegos infantiles🤸🍃 y a pocos metros del lago más grande de todo Córdoba🏝️🏖️...
-        Atendido por sus dueños Lili y Dante🌟</P>
+  <!-- ENCABEZADO -->
+  <header>
+    <div class="encabezado">
+      <img src="Imagenes/LOS NARANJOS.png" alt="Logo Los Naranjos Departamentos">
+      <div class="titulos">
+        <h1>LOS NARANJOS DEPARTAMENTOS</h1>
+        <h2>Embalse de Calamuchita</h2>
+      </div>
     </div>
 
-    <div id="carousel" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width:800px">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                <img src="./Imagenes/los naranjos horizontal.jpg" class="d-block w-100" alt="">
-                </div>
-
-                <div class="carousel-item">
-                <img src="./Imagenes/4 por fuera horizontal.jpg" class="d-block w-100" alt="">
-                </div>
-
-                <div class="carousel-item">
-                <img src="./Imagenes/5 por fuera horizontal.jpg" class="d-block w-100" alt="">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev"><!--boton anterior-->
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next"><!--boton siguiente-->
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
- </div>
-
-    <div class="contenedor">
-        <div class="caja">
-            <img src="./Imagenes/6 vertical.jpg" alt="Departamento 6"> <!--src:para indicar la ruta de imagen. alt:es un texto alternativo como referencia a la imagen (epigrafe)-->
-            <h1>CONFORT</h1> <!--h1 mas destacado a h6 menos destacado -->
-            <div id = "boton1">
-                <p>Cabañas totalmente equipadas con todo lo que necesitás: cocina completa, WiFi y ambientes acogedores para que te sientas como en casa.</p> <!--parrafo-->
-            </div>
-            <button onclick='muestra_oculta("boton1")' class=" btn btn-primary"></button>
-        </div>
-
-      <div class="caja">
-            <img src="./Imagenes/quincho.jpeg" alt="quincho">
-            <h1>TRANQUILIDAD</h1>
-            <div id = "boton2">
-                <p>Rodeadas de naturaleza, lejos del ruido de la gran ciudad. Relajate, disfrutá del canto de los pájaros y de noches estrelladas únicas en Embalse.</p>
-            </div>
-            <button onclick='muestra_oculta("boton2")' class="btn btn-primary"></button>
-     </div>
-        
-        <div class="caja">
-            <img src="./Imagenes/2 vertical.jpg" alt="departamento 2">
-            <h1>VACACIONES</h1>
-            <div id = "boton3">
-             <p>Un lugar pensado para disfrutar en pareja, en familia o con amigos. Quincho, asadores y actividades al aire libre te esperan para unas vacaciones inolvidables.</p>
-            </div>
-              <button onclick='muestra_oculta("boton3")' class="btn btn-primary"> </button>
-      </div>
-   </div>
-
-   <div class="embedsocial-widget" data-ref="a407fbd403773fee906b95506d8412d0"> <a href="https://embedsocial.com/google-reviews-widget/" title="Add Google reviews on a website" target="_blank" class="powered-by-es es-slider" > <img src="https://embedsocial.com/cdn/icon/embedsocial-logo.webp" alt="EmbedSocial" > <span> Google reviews widget </span> </a> </div> <script> (function(d, s, id) { var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/aht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialWidgetScript")); </script>
-
-   <div class="slogan">
-    <h1>"EMBALSE EL CORAZÓN DE CÓRDOBA"</h1>
-   </div>
-   
-   <div  ID="ubicacion">
-        <h2>Entre Ríos 1574 - Barrio El Pueblito - Embalse - Córdoba</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3376.8061094649593!2d-64.4102351!3d-32.18250280000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d29fa45c695509%3A0x93b1439a8685497e!2sLos%20Naranjos%20Departamentos!5e0!3m2!1ses-419!2sar!4v1755872133793!5m2!1ses-419!2sar" width="900" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-   </div>
-
-   <footer>
-    <p>Conocé nuestra Política de privacidad | ©2025 Los Naranjos Departamentos, Embalse, Córdoba, Argentina. Todos los derechos reservados.</p>
-   </footer>
-   
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-   
-</body>
-</html>
+    <nav>
+      <ul>
+        <li><a class="boton" href="#ubicacion">UBICACIÓN</a></li>
+        <li><a class="boton" href="https://www.instagram.com/losnaranjos.departamentos/" target="_blank">INSTAGRAM</a></li>
+        <li><a class="boton" href="https://www.facebook.com/p/Los-Naranjos-Departamentos-100071338632472/"
+            target="_blank">FACEBOOK</a></li>
+        <li><a class="boton"
+            href="https://wa.me/5493571531090?text=Hola!%20Quiero%20saber%20si%20tiene%20disponible%20un%20departamento%20para%2
