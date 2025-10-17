@@ -137,6 +137,13 @@ p{
     font-family:cursive;
 }
 
+/* Oculta los textos al cargar la página */
+#boton1,
+#boton2,
+#boton3 {
+  display: none;
+}
+
 .btn-primary {
     background-color: white !important; /* Forza el btn*/
     color: #ff6600;                
